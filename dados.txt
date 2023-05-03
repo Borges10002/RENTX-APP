@@ -1,0 +1,8 @@
+criar projeto typescript
+  https://docs.expo.dev/guides/typescript/
+  criar aquivo tsconfig.json
+  App.js mudar para App.tsx
+
+   yarn add -D ts-node typescript
+   expo start
+   /***************************************************************************/
