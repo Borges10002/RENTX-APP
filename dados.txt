@@ -6,3 +6,21 @@ criar projeto typescript
    yarn add -D ts-node typescript
    expo start
    /***************************************************************************/
+
+export default nao colocamos chaves por volta {}
+  exemplo export default function App() {}
+     import App from "caminhao"
+
+export sem default colocamos chaves {App}
+exemplo export function App() {}
+     import {App} from "caminhao"
+   /***************************************************************************/
+  
+
+biblioteca do styled-components
+  yarn add styled-components
+  yarn add @types/styled-components-react-native -D 
+
+
+biblioteca de fonts 
+  npx expo install expo-font @expo-google-fonts/inter  @expo-google-fonts/archivo
