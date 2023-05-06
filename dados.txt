@@ -1,3 +1,6 @@
+Plugins visual code 
+  Code Spell checker - corrigir palavrar ingles
+
 criar projeto typescript
   https://docs.expo.dev/guides/typescript/
   criar aquivo tsconfig.json

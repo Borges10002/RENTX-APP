@@ -14,6 +14,9 @@ import {
 } from "@expo-google-fonts/archivo";
 
 import { Home } from "./src/screens/Home";
+import { ThemeProvider } from "styled-components";
+
+import theme from "./src/screens/styles/theme";
 
 export default function App() {
   const [fontsLoaded] = useFonts({
@@ -28,5 +31,9 @@ export default function App() {
     return <AppLoading />;
   }
 
-  return <Home />;
+  return (
+    <ThemeProvider theme={theme}>
+      <Home />
+    </ThemeProvider>
+  );
 }
