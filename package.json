@@ -18,6 +18,8 @@
     "expo-status-bar": "~1.4.4",
     "react": "18.2.0",
     "react-native": "0.71.7",
+    "react-native-responsive-fontsize": "^0.5.1",
+    "react-native-svg": "13.4.0",
     "styled-components": "^5.3.10"
   },
   "devDependencies": {
@@ -25,6 +27,7 @@
     "@types/react": "~18.0.27",
     "@types/react-native": "^0.71.6",
     "@types/styled-components-react-native": "^5.2.1",
+    "react-native-svg-transformer": "^1.0.0",
     "ts-node": "^10.9.1",
     "typescript": "^5.0.4"
   },

@@ -27,3 +27,13 @@ biblioteca do styled-components
 
 biblioteca de fonts 
   npx expo install expo-font @expo-google-fonts/inter  @expo-google-fonts/archivo
+
+biblioteca para react native entender svg 
+  https://github.com/software-mansion/react-native-svg
+  expo install react-native-svg
+  https://github.com/kristerkari/react-native-svg-transformer
+  yarn add --dev react-native-svg-transformer
+
+biblioteca responsive-fontsize
+  yarn add react-native-responsive-fontsize
+  
