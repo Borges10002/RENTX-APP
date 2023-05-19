@@ -36,4 +36,9 @@ biblioteca para react native entender svg
 
 biblioteca responsive-fontsize
   yarn add react-native-responsive-fontsize
+
+biblioteca gesture-handler estilizar botao
+npx expo install react-native-gesture-handler
+
+
   

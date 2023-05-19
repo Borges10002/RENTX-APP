@@ -4,7 +4,7 @@ import { StatusBar } from "react-native";
 import Logo from "../../assets/logo.svg";
 import { RFValue } from "react-native-responsive-fontsize";
 
-import { Container, Header, TotalCars, HeaderContent } from "./styles";
+import { Container, Header, TotalCars, HeaderContent, CarList } from "./styles";
 
 import { Car } from "../../components/Car";
 
@@ -35,7 +35,11 @@ export function Home() {
         </HeaderContent>
       </Header>
 
-      <Car data={carDataOne} />
+      <CarList
+        data={[1, 2, 3]}
+        keyExtractor={(item) => String(item)}
+        renderItem={({ item }) => <Car data={carDataOne} />}
+      />
     </Container>
   );
 }
