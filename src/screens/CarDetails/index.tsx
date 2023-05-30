@@ -13,9 +13,18 @@ import {
   Period,
   Price,
   About,
+  Acessories,
 } from "./styles";
 import { BackButton } from "../../components/BackButton";
 import { ImageSlider } from "../../components/ImageSlider";
+import { Accessory } from "../../components/Accessory";
+
+import speedSvg from "../../assets/speed.svg";
+import accelerationdSvg from "../../assets/acceleration.svg";
+import forcedSvg from "../../assets/force.svg";
+import gasolineSvg from "../../assets/gasoline.svg";
+import exchangeSvg from "../../assets/exchange.svg";
+import peopleSvg from "../../assets/people.svg";
 
 export function CarDetails() {
   return (
@@ -27,7 +36,7 @@ export function CarDetails() {
       <CarImages>
         <ImageSlider
           imagesUrl={[
-            "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.gratispng.com%2Fbaixar%2Faudi-cars.html&psig=AOvVaw3BLdl9LKgpkcpBivwvpPgq&ust=1684494111707000&source=images&cd=vfe&ved=0CBEQjRxqFwoTCNicotrb_v4CFQAAAAAdAAAAABAJ",
+            "https://www.chevrolet.com.br/content/dam/chevrolet/mercosur/brazil/portuguese/index/cars/cars-subcontent/02-images/cruze-sport6-rs-carros.jpg",
           ]}
         />
       </CarImages>
@@ -44,6 +53,15 @@ export function CarDetails() {
             <Price>R$ 580</Price>
           </Rent>
         </Details>
+
+        <Acessories>
+          <Accessory name="380km/h" icon={speedSvg} />
+          <Accessory name="3.2s" icon={accelerationdSvg} />
+          <Accessory name="880 HP" icon={forcedSvg} />
+          <Accessory name="Gasolina" icon={gasolineSvg} />
+          <Accessory name="Auto" icon={exchangeSvg} />
+          <Accessory name="2 pessoas" icon={peopleSvg} />
+        </Acessories>
 
         <About>
           Este é automóvel desportivo. Surgiu do lendário touro de ider
