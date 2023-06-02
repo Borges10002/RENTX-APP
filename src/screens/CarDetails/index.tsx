@@ -14,6 +14,7 @@ import {
   Price,
   About,
   Acessories,
+  Footer,
 } from "./styles";
 import { BackButton } from "../../components/BackButton";
 import { ImageSlider } from "../../components/ImageSlider";
@@ -25,6 +26,7 @@ import forcedSvg from "../../assets/force.svg";
 import gasolineSvg from "../../assets/gasoline.svg";
 import exchangeSvg from "../../assets/exchange.svg";
 import peopleSvg from "../../assets/people.svg";
+import { Button } from "../../components/Button";
 
 export function CarDetails() {
   return (
@@ -68,7 +70,21 @@ export function CarDetails() {
           indultado na praça Real Maestranza de Servilla. È um belissimo carro
           para quem gosta de acelerar.
         </About>
+        <About>
+          Este é automóvel desportivo. Surgiu do lendário touro de ider
+          indultado na praça Real Maestranza de Servilla. È um belissimo carro
+          para quem gosta de acelerar.
+        </About>
+        <About>
+          Este é automóvel desportivo. Surgiu do lendário touro de ider
+          indultado na praça Real Maestranza de Servilla. È um belissimo carro
+          para quem gosta de acelerar.
+        </About>
       </Content>
+
+      <Footer>
+        <Button title="Confirmar" color="blue" />
+      </Footer>
     </Container>
   );
 }

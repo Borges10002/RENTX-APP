@@ -1,10 +1,9 @@
 import React from "react";
-import AppLoading from "expo-app-loading";
 
 import {
-  useFonts,
   Inter_400Regular,
   Inter_500Medium,
+  useFonts,
 } from "@expo-google-fonts/inter";
 
 import {
@@ -15,9 +14,8 @@ import {
 
 import { ThemeProvider } from "styled-components";
 
+import { Scheduling } from "./src/screens/Scheduling";
 import theme from "./src/screens/styles/theme";
-import { Home } from "./src/screens/Home";
-import { CarDetails } from "./src/screens/CarDetails";
 
 export default function App() {
   const [fontsLoaded] = useFonts({
@@ -28,13 +26,13 @@ export default function App() {
     Archivo_600SemiBold,
   });
 
-  if (!fontsLoaded) {
-    return <AppLoading />;
-  }
+  // if (!fontsLoaded) {
+  //   return <AppLoading />;
+  // }
 
   return (
     <ThemeProvider theme={theme}>
-      <CarDetails />
+      <Scheduling />
     </ThemeProvider>
   );
 }
