@@ -40,5 +40,13 @@ biblioteca responsive-fontsize
 biblioteca gesture-handler estilizar botao
 npx expo install react-native-gesture-handler
 
+biblioteca de calendario 
+  https://github.com/wix/react-native-calendars
+  yarn add react-native-calendars
+  yarn add @types/react-native-calendars -D
+
+
+
+
 
   

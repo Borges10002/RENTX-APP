@@ -29,6 +29,8 @@ export const Title = styled.Text`
   font-size: ${RFValue(34)}px;
 
   margin-top: 24px;
+
+  margin: 32px 0;
 `;
 
 export const RentalPeriod = styled.View`
@@ -37,8 +39,6 @@ export const RentalPeriod = styled.View`
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-
-  margin-top: 32px 0;
 `;
 
 export const DateInfo = styled.View`
