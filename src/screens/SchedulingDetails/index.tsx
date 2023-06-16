@@ -1,34 +1,49 @@
+import { Feather } from "@expo/vector-icons";
 import React from "react";
+import { useTheme } from "styled-components";
 
 import {
-  Container,
-  Header,
-  CarImages,
-  Content,
-  Details,
-  Description,
+  Acessories,
   Brand,
+  CarImages,
+  Container,
+  Content,
+  Description,
+  Details,
+  Footer,
+  Header,
   Name,
-  Rent,
   Period,
   Price,
-  About,
-  Acessories,
-  Footer,
+  Rent,
+  RentalPeriod,
+  CalendarIcon,
+  DateInfo,
+  DateTitle,
+  DateValue,
+  RentalPrice,
+  RentalPriceLabel,
+  RentalPriceDetails,
+  RentalPriceQuota,
+  RentalPriceTotal,
 } from "./styles";
+
+import { Accessory } from "../../components/Accessory";
 import { BackButton } from "../../components/BackButton";
 import { ImageSlider } from "../../components/ImageSlider";
-import { Accessory } from "../../components/Accessory";
 
-import speedSvg from "../../assets/speed.svg";
+import { RFValue } from "react-native-responsive-fontsize";
 import accelerationdSvg from "../../assets/acceleration.svg";
+import exchangeSvg from "../../assets/exchange.svg";
 import forcedSvg from "../../assets/force.svg";
 import gasolineSvg from "../../assets/gasoline.svg";
-import exchangeSvg from "../../assets/exchange.svg";
 import peopleSvg from "../../assets/people.svg";
+import speedSvg from "../../assets/speed.svg";
 import { Button } from "../../components/Button";
 
-export function CarDetails() {
+export function SchedulingDetails() {
+  const theme = useTheme();
+
   return (
     <Container>
       <Header>
@@ -65,11 +80,39 @@ export function CarDetails() {
           <Accessory name="2 pessoas" icon={peopleSvg} />
         </Acessories>
 
-        <About>
-          Este é automóvel desportivo. Surgiu do lendário touro de ider
-          indultado na praça Real Maestranza de Servilla. È um belissimo carro
-          para quem gosta de acelerar.
-        </About>
+        <RentalPeriod>
+          <CalendarIcon>
+            <Feather
+              name="calendar"
+              size={RFValue(24)}
+              color={theme.colors.shape}
+            />
+          </CalendarIcon>
+
+          <DateInfo>
+            <DateTitle>De</DateTitle>
+            <DateValue>18/06/2023</DateValue>
+          </DateInfo>
+
+          <Feather
+            name="calendar"
+            size={RFValue(24)}
+            color={theme.colors.shape}
+          />
+
+          <DateInfo>
+            <DateTitle>De</DateTitle>
+            <DateValue>18/06/2023</DateValue>
+          </DateInfo>
+        </RentalPeriod>
+
+        <RentalPrice>
+          <RentalPriceLabel>TOTAL</RentalPriceLabel>
+          <RentalPriceDetails>
+            <RentalPriceQuota>R$ 580 x3 diárias</RentalPriceQuota>
+            <RentalPriceTotal>R$ 2.900</RentalPriceTotal>
+          </RentalPriceDetails>
+        </RentalPrice>
       </Content>
 
       <Footer>
