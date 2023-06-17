@@ -12,6 +12,8 @@ export const Content = styled.View`
   flex: 1;
   justify-content: center;
   align-items: center;
+
+  padding-bottom: 80px;
 `;
 
 export const Title = styled.View`
@@ -30,4 +32,11 @@ export const Message = styled.View`
   text-align: center;
 
   margin-top: 16px;
+`;
+
+export const Footer = styled.View`
+  width: 100%;
+  align-items: center;
+
+  margin: 80px 0;
 `;
