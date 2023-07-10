@@ -1,4 +1,5 @@
 import React from "react";
+import { useNavigation } from "@react-navigation/native";
 
 import {
   Container,
@@ -29,6 +30,12 @@ import peopleSvg from "../../assets/people.svg";
 import { Button } from "../../components/Button";
 
 export function CarDetails() {
+  const navigation = useNavigation();
+
+  function handleConfirmRentail() {
+    navigation.navigate("Scheduling");
+  }
+
   return (
     <Container>
       <Header>
@@ -73,7 +80,11 @@ export function CarDetails() {
       </Content>
 
       <Footer>
-        <Button title="Confirmar" color="blue" />
+        <Button
+          title="Escolher periodo do aluguel"
+          color="blue"
+          onPress={handleConfirmRentail}
+        />
       </Footer>
     </Container>
   );

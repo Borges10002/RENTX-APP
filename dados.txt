@@ -46,6 +46,20 @@ biblioteca de calendario
   yarn add @types/react-native-calendars -D
 
 
+biblioteca de navegacao 
+ https://reactnavigation.org/docs/getting-started/
+  npm install @react-navigation/native
+  npx expo install react-native-screens react-native-safe-area-context
+  yarn add react-native-screens react-native-safe-area-context
+  npm install @react-navigation/stack
+  yarn add react-native-gesture-handler
+  npm install @react-navigation/native-stack
+
+
+
+
+
+
 
 
 
