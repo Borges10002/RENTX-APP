@@ -55,7 +55,10 @@ biblioteca de navegacao
   yarn add react-native-gesture-handler
   npm install @react-navigation/native-stack
 
-
+  biblioteca para simular um api json 
+    https://github.com/typicode/json-server
+    npm install -g json-server
+    json-server ./src/services/server.json --host 192.168.1.105 --port 3333 dealy 700
 
 
 

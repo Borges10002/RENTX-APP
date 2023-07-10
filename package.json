@@ -6,7 +6,8 @@
     "start": "expo start --dev-client",
     "android": "expo run:android",
     "ios": "expo run:ios",
-    "web": "expo start --web"
+    "web": "expo start --web",
+    "api": "json-server ./src/services/server.json --host 192.168.1.105 --port 3333 dealy 700"
   },
   "dependencies": {
     "@expo-google-fonts/archivo": "^0.2.3",
@@ -14,6 +15,7 @@
     "@react-navigation/native": "^6.1.7",
     "@react-navigation/native-stack": "^6.9.13",
     "@react-navigation/stack": "^6.3.17",
+    "axios": "^1.4.0",
     "deprecated-react-native-prop-types": "^4.1.0",
     "expo": "~48.0.15",
     "expo-app-loading": "^2.1.1",
