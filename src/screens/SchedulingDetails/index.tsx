@@ -1,5 +1,5 @@
-import { Feather } from "@expo/vector-icons";
 import React, { useEffect, useState } from "react";
+import { Feather } from "@expo/vector-icons";
 
 import { useNavigation, useRoute } from "@react-navigation/native";
 import { useTheme } from "styled-components";
@@ -53,6 +53,8 @@ interface RentalPeriod {
 }
 
 export function SchedulingDetails() {
+  const [loading, setLoading] = useState(false);
+
   const [rentalPeriod, setRentalPerid] = useState<RentalPeriod>(
     {} as RentalPeriod
   );
@@ -66,6 +68,7 @@ export function SchedulingDetails() {
   const rentTotal = Number(dates.length * car.rent.price);
 
   async function handleRentalConfirm() {
+    setLoading(true);
     const schedulesByCar = await api.get(`/schedules_bycars/${car.id}`);
 
     const unavailable_dates = [
@@ -76,6 +79,11 @@ export function SchedulingDetails() {
     await api.post("schedules_byuser", {
       user_id: 1,
       car,
+      startDate: format(getPlatformDate(new Date(dates[0])), "dd/MM/yyyy"),
+      endDate: format(
+        getPlatformDate(new Date(dates[dates.length - 1])),
+        "dd/MM/yyyy"
+      ),
     });
 
     api
@@ -84,7 +92,10 @@ export function SchedulingDetails() {
         unavailable_dates,
       })
       .then((response) => navigation.navigate("SchedulingComplete"))
-      .catch(() => Alert.alert("Nao foi possivel confirmar o agendamento."));
+      .catch(() => {
+        setLoading(false);
+        Alert.alert("Nao foi possivel confirmar o agendamento.");
+      });
   }
 
   function handleBack() {
@@ -176,6 +187,8 @@ export function SchedulingDetails() {
           title="Alugar agora"
           color={theme.colors.success}
           onPress={handleRentalConfirm}
+          enabled={!loading}
+          loading={loading}
         />
       </Footer>
     </Container>
