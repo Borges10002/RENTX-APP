@@ -60,6 +60,10 @@ biblioteca de navegacao
     npm install -g json-server
     json-server ./src/services/server.json --host 192.168.1.105 --port 3333 dealy 700
 
+  biblioteca para lidar com date 
+    yarn add date-fns
+    yarn add @types/date-fns 
+
 
 
 

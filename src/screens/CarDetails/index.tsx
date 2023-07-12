@@ -1,35 +1,29 @@
-import React from "react";
 import { useNavigation, useRoute } from "@react-navigation/native";
+import React from "react";
 
-import {
-  Container,
-  Header,
-  CarImages,
-  Content,
-  Details,
-  Description,
-  Brand,
-  Name,
-  Rent,
-  Period,
-  Price,
-  About,
-  Accessories,
-  Footer,
-} from "./styles";
+import { Accessory } from "../../components/Accessory";
 import { BackButton } from "../../components/BackButton";
 import { ImageSlider } from "../../components/ImageSlider";
-import { Accessory } from "../../components/Accessory";
+import {
+  About,
+  Accessories,
+  Brand,
+  CarImages,
+  Container,
+  Content,
+  Description,
+  Details,
+  Footer,
+  Header,
+  Name,
+  Period,
+  Price,
+  Rent,
+} from "./styles";
 
-import speedSvg from "../../assets/speed.svg";
-import accelerationdSvg from "../../assets/acceleration.svg";
-import forcedSvg from "../../assets/force.svg";
-import gasolineSvg from "../../assets/gasoline.svg";
-import exchangeSvg from "../../assets/exchange.svg";
-import peopleSvg from "../../assets/people.svg";
+import { getAccessoryIcon } from "../../utils/getAccessoryIcon";
 import { Button } from "../../components/Button";
 import { CarDTO } from "../../dtos/CarDTO";
-import { Acessories } from "../SchedulingDetails/styles";
 
 interface Params {
   car: CarDTO;
@@ -42,7 +36,7 @@ export function CarDetails() {
   const { car } = route.params as Params;
 
   function handleConfirmRentail() {
-    navigation.navigate("Scheduling");
+    navigation.navigate("Scheduling", { car });
   }
 
   function handleBack() {
@@ -77,7 +71,7 @@ export function CarDetails() {
             <Accessory
               key={accessory.type}
               name={accessory.name}
-              icon={speedSvg}
+              icon={getAccessoryIcon(accessory.type)}
             />
           ))}
         </Accessories>

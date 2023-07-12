@@ -74,7 +74,7 @@ export const Price = styled.Text`
   font-size: ${RFValue(10)}px;
 `;
 
-export const Acessories = styled.View`
+export const Accessories = styled.View`
   width: 100%;
 
   flex-direction: row /*deixa tudo na mesma linha*/;
@@ -155,13 +155,13 @@ export const RentalPriceDetails = styled.View`
 export const RentalPriceQuota = styled.Text`
   font-family: ${({ theme }) => theme.fonts.primary_500};
   color: ${({ theme }) => theme.colors.title};
-  font-size: ${RFValue(15)}px;
+  font-size: ${RFValue(14)}px;
 `;
 
 export const RentalPriceTotal = styled.Text`
   font-family: ${({ theme }) => theme.fonts.secondary_500};
   color: ${({ theme }) => theme.colors.success};
-  font-size: ${RFValue(10)}px;
+  font-size: ${RFValue(24)}px;
 
   text-transform: uppercase;
 `;
