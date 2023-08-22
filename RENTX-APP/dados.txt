@@ -1,0 +1,102 @@
+executar proejeto react native 
+  npx react-native run-android
+
+Plugins visual code 
+  Code Spell checker - corrigir palavrar ingles
+
+criar projeto typescript
+  https://docs.expo.dev/guides/typescript/
+  criar aquivo tsconfig.json
+  App.js mudar para App.tsx
+'1
+   yarn add -D ts-node typescript
+   expo start
+   /***************************************************************************/
+
+export default nao colocamos chaves por volta {}
+  exemplo export default function App() {}
+     import App from "caminhao"
+
+export sem default colocamos chaves {App}
+exemplo export function App() {}
+     import {App} from "caminhao"
+   /***************************************************************************/
+  
+
+biblioteca do styled-components
+  yarn add styled-components
+  yarn add @types/styled-components-react-native -D 
+
+
+biblioteca de fonts 
+  npx expo install expo-font @expo-google-fonts/inter  @expo-google-fonts/archivo
+
+biblioteca para react native entender svg 
+  https://github.com/software-mansion/react-native-svg
+  expo install react-native-svg
+  https://github.com/kristerkari/react-native-svg-transformer
+  yarn add --dev react-native-svg-transformer
+
+biblioteca responsive-fontsize
+  yarn add react-native-responsive-fontsize
+
+biblioteca gesture-handler estilizar botao
+npx expo install react-native-gesture-handler
+
+biblioteca de calendario 
+  https://github.com/wix/react-native-calendars
+  yarn add react-native-calendars
+  yarn add @types/react-native-calendars -D
+
+
+biblioteca de navegacao 
+ https://reactnavigation.org/docs/getting-started/
+  npm install @react-navigation/native
+  npx expo install react-native-screens react-native-safe-area-context
+  yarn add react-native-screens react-native-safe-area-context
+  npm install @react-navigation/stack
+  yarn add react-native-gesture-handler
+  npm install @react-navigation/native-stack
+
+  biblioteca para simular um api json 
+    https://github.com/typicode/json-server
+    npm install -g json-server
+    json-server ./src/services/server.json --host 192.168.1.105 --port 3333 dealy 700
+
+  biblioteca para lidar com date 
+    yarn add date-fns
+    yarn add @types/date-fns 
+
+biblioteca do react native reanimated 
+  https://docs.swmansion.com/react-native-reanimated/docs/fundamentals/animations/
+  expo install  react-native-reanimated 
+  https://cubic-bezier.com/#.17,.67,.83,.67
+
+
+  biblioteca de splash-screen
+https://docs.expo.dev/versions/latest/sdk/splash-screen/
+  npx expo install expo-splash-screen
+
+
+ biblioteca de gif animando em json
+  https://lottiefiles.com/blog/working-with-lottie/how-to-use-lottie-in-react-app
+  https://docs.expo.dev/versions/v49.0.0/sdk/lottie/
+  npx expo install lottie-react-native
+
+  react native tab 
+    yarn add @react-navigation/bottom-tabs
+    yarn add @react-navigation/material-bottom-tabs react-native-paper react-native-vector-icons
+    yarn add @react-navigation/stack
+
+
+biblioteca  yup
+  yarn add yup
+
+WatermelonDB
+https://github.com/Nozbe/WatermelonDB
+https://watermelondb.dev/docs
+yarn add @nozbe/watermelondb
+yarn add --dev @babel/plugin-proposal-decorators
+
+
+  
