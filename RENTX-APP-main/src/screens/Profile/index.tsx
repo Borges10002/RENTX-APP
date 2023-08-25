@@ -13,6 +13,10 @@ import {
   PhotoContainer,
   Photo,
   PhotoButton,
+  Content,
+  Options,
+  Option,
+  OptionTitle,
 } from "./styles";
 import { BackButton } from "../../components/BackButton";
 
@@ -47,6 +51,17 @@ export function Profile() {
           </PhotoButton>
         </PhotoContainer>
       </Header>
+
+      <Content>
+        <Options>
+          <Option active={true}>
+            <OptionTitle active={true}>Dados</OptionTitle>
+          </Option>
+          <Option active={false}>
+            <OptionTitle active={true}>Trocar senha</OptionTitle>
+          </Option>
+        </Options>
+      </Content>
     </Container>
   );
 }

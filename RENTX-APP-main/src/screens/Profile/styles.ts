@@ -63,3 +63,23 @@ export const PhotoButton = styled(RectButton)`
   bottom: 10px;
   right: 10px;
 `;
+
+export const Content = styled.View`
+  flex: 1;
+  padding: 0 24px;
+  margin-top: 122px;
+`;
+
+export const Options = styled.View`
+  border-bottom-width: 1px;
+  border-bottom-color: ${({ theme }) => theme.colors.line};
+
+  flex-direction: row;
+  justify-content: space-between;
+
+  margin-bottom: 24px;
+`;
+
+export const Option = styled.View``;
+
+export const OptionTitle = styled.Text``;
