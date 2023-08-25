@@ -1,4 +1,4 @@
-package com.rentx;
+package com.borges10002.rentx;
 
 import android.app.Application;
 import android.content.res.Configuration;
@@ -16,6 +16,7 @@ import expo.modules.ApplicationLifecycleDispatcher;
 import expo.modules.ReactNativeHostWrapper;
 
 import java.util.List;
+import com.nozbe.watermelondb.WatermelonDBPackage;
 
 public class MainApplication extends Application implements ReactApplication {
 

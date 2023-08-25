@@ -4,7 +4,7 @@
  * <p>This source code is licensed under the MIT license found in the LICENSE file in the root
  * directory of this source tree.
  */
-package com.rentx;
+package com.borges10002.rentx;
 
 import android.content.Context;
 import com.facebook.flipper.android.AndroidFlipperClient;
@@ -23,6 +23,11 @@ import com.facebook.react.ReactInstanceManager;
 import com.facebook.react.bridge.ReactContext;
 import com.facebook.react.modules.network.NetworkingModule;
 import okhttp3.OkHttpClient;
+import com.facebook.flipper.plugins.databases.impl.SqliteDatabaseDriver;
+import com.facebook.flipper.plugins.databases.impl.SqliteDatabaseProvider;
+import java.io.File;
+import java.util.List;
+import java.util.ArrayList;
 
 /**
  * Class responsible of loading Flipper inside your React Native application. This is the debug
@@ -34,7 +39,17 @@ public class ReactNativeFlipper {
       final FlipperClient client = AndroidFlipperClient.getInstance(context);
 
       client.addPlugin(new InspectorFlipperPlugin(context, DescriptorMapping.withDefaults()));
-      client.addPlugin(new DatabasesFlipperPlugin(context));
+      client.addPlugin(new DatabasesFlipperPlugin(new SqliteDatabaseDriver(context, new SqliteDatabaseProvider() {
+        @Override
+        public List<File> getDatabaseFiles() {
+          List<File> databaseFiles = new ArrayList<>();
+          for (String databaseName : context.databaseList()) {
+            databaseFiles.add(context.getDatabasePath(databaseName));
+          }
+          databaseFiles.add(new File(context.getDatabasePath("morrow.db").getPath().replace("/databases", "")));
+          return databaseFiles;
+        }
+      })));
       client.addPlugin(new SharedPreferencesFlipperPlugin(context));
       client.addPlugin(CrashReporterPlugin.getInstance());
 

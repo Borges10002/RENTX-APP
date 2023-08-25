@@ -1,4 +1,5 @@
 import { Database } from "@nozbe/watermelondb";
+import DatabaseProvider from "@nozbe/watermelondb/DatabaseProvider";
 import SQLiteAdapter from "@nozbe/watermelondb/adapters/sqlite";
 
 import { schemas } from "./schema";
@@ -7,10 +8,10 @@ import { Car } from "./models/Car";
 
 const adapter = new SQLiteAdapter({
   schema: schemas,
-  jsi: true /* enable if Platform.OS === 'ios' */,
 });
 
 export const database = new Database({
   adapter,
-  modelClasses: [User, Car],
+  modelClasses: [],
+  actionsEnabled: true,
 });

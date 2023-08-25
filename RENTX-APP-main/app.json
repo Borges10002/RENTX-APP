@@ -4,28 +4,17 @@
     "slug": "rentx",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
     "splash": {
-      "image": "./assets/splash.png",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
     "assetBundlePatterns": ["**/*"],
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#ffffff",
-        "kotlinVersion": "1.6.10",
-        "compileSdkVersion": 33,
-        "targetSdkVersion": 33,
-        "packagingOptions": {
-          "pickFirst": ["**/libc++_shared.so"]
-        }
-      }
-    },
-    "web": {
-      "favicon": "./assets/favicon.png"
+        "backgroundColor": "#ffffff"
+      },
+      "package": "com.borges10002.rentx"
     },
     "plugins": [
       [
@@ -42,6 +31,11 @@
           }
         }
       ]
-    ]
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "71f7dae0-7b5d-4205-b6fe-528e1fe0348a"
+      }
+    }
   }
 }

@@ -5,7 +5,7 @@ import React, {
   ReactNode,
   useEffect,
 } from "react";
-import { api } from "../services/api";
+import api from "../services/api";
 import { database } from "../database";
 import { User as ModelUser } from "../database/models/User";
 
@@ -38,7 +38,7 @@ interface AuthProviderProps {
 
 const AuthContext = createContext<AuthContextData>({} as AuthContextData);
 
-const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
+const AuthProvider: React.FC<AuthProviderProps> = ({ children }: any) => {
   const [data, setData] = useState<User>({} as User);
   const [loading, setLoading] = useState(true);
 
@@ -54,7 +54,7 @@ const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
 
       const userCollection = database.get<ModelUser>("users");
       await database.write(async () => {
-        await userCollection.create((newUser: any) => {
+        await userCollection.create((newUser) => {
           (newUser.user_id = user.id),
             (newUser.name = user.name),
             (newUser.email = user.email),
@@ -89,7 +89,7 @@ const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
       const userCollection = database.get<ModelUser>("users");
       await database.write(async () => {
         const userSelected = await userCollection.find(user.id);
-        await userSelected.update((userData: any) => {
+        await userSelected.update((userData) => {
           (userData.name = user.name),
             (userData.driver_license = user.driver_license),
             (userData.avatar = user.avatar);

@@ -20,10 +20,6 @@ const carSchema = tableSchema({
       type: "string",
     },
     {
-      name: "name",
-      type: "string",
-    },
-    {
       name: "period",
       type: "string",
     },
