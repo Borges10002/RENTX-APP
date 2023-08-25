@@ -1,7 +1,12 @@
 import { BorderlessButton, RectButton } from "react-native-gesture-handler";
 import { getStatusBarHeight } from "react-native-iphone-x-helper";
 import { RFValue } from "react-native-responsive-fontsize";
+import { css } from "styled-components";
 import styled from "styled-components/native";
+
+interface OptionProps {
+  active: boolean;
+}
 
 export const Container = styled.View`
   flex: 1;
@@ -80,6 +85,21 @@ export const Options = styled.View`
   margin-bottom: 24px;
 `;
 
-export const Option = styled.View``;
+export const Option = styled.TouchableOpacity<OptionProps>`
+  padding-bottom: 14px;
 
-export const OptionTitle = styled.Text``;
+  ${({ active }) =>
+    active &&
+    css`
+      border-bottom-width: 3px;
+      border-bottom-color: ${({ theme }) => theme.colors.main};
+    `}
+`;
+
+export const OptionTitle = styled.Text<OptionProps>`
+  font-size: ${RFValue(20)}px;
+  font-family: ${({ theme, active }) =>
+    active ? theme.fonts.secondary_600 : theme.fonts.secondary_500};
+  color: ${({ theme, active }) =>
+    active ? theme.colors.header : theme.colors.text_detail};
+`;
