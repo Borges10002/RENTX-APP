@@ -101,5 +101,14 @@ yarn add --dev @babel/plugin-proposal-decorators
 biblioteca de imagem do expo 
   expo install expo-image-picker 
 
+biblioteca de interneto do expo 
+https://docs.expo.dev/versions/latest/sdk/netinfo/
+npx expo install @react-native-community/netinfo
+
+
+biblioteca de img para trabalhar offline 
+  https://github.com/DylanVann/react-native-fast-image
+   yarn add react-native-fast-image
+
 
   
