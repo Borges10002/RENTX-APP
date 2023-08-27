@@ -59,15 +59,17 @@ export function MyCars() {
     async function fetchCars() {
       try {
         const response = await api.get("/rentals");
-        const dataFormatted = response.data.map((data: DataProps) => {
-          return {
-            id: data.id,
-            car: data.car,
-            start_date: format(parseISO(data.start_date), "dd/MM/yyyy"),
-            end_date: format(parseISO(data.end_date), "dd/MM/yyyy"),
-          };
-        });
-        setCars(dataFormatted);
+        if (response.data) {
+          const dataFormatted = response.data.map((data: DataProps) => {
+            return {
+              id: data.id,
+              car: data.car,
+              start_date: format(parseISO(data.start_date), "dd/MM/yyyy"),
+              end_date: format(parseISO(data.end_date), "dd/MM/yyyy"),
+            };
+          });
+          setCars(dataFormatted);
+        }
       } catch (error) {
         console.log(error);
       } finally {
