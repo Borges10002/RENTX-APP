@@ -1,37 +1,37 @@
 import React from "react";
 
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
-
-import { MyCars } from "../screens/MyCars";
 import { AppStackRoutes } from "./app.stack.routes";
-
-import { Platform } from "react-native";
 import { useTheme } from "styled-components";
-import CarSvg from "../assets/car.svg";
+import { Platform } from "react-native";
+
 import HomeSvg from "../assets/home.svg";
+import CarSvg from "../assets/car.svg";
 import PeopleSvg from "../assets/people.svg";
+import { MyCars } from "../screens/MyCars";
 import { Profile } from "../screens/Profile";
 
 const { Navigator, Screen } = createBottomTabNavigator();
 
 export function AppTabRoutes() {
-  const theme = useTheme();
+  const { colors } = useTheme();
+
   return (
     <Navigator
       screenOptions={{
-        tabBarActiveTintColor: theme.colors.main,
-        tabBarInactiveTintColor: theme.colors.text_detail,
-        tabBarLabelPosition: "beside-icon",
         headerShown: false,
+        tabBarShowLabel: false,
         tabBarStyle: {
-          paddingVertical: Platform.OS === "ios" ? 20 : 0,
           height: 78,
-          backgroundColor: theme.colors.background_primary,
+          paddingVertical: Platform.OS === "ios" ? 20 : 0,
+          backgroundColor: colors.background_primary,
         },
+        tabBarActiveTintColor: colors.main,
+        tabBarInactiveTintColor: colors.text_detail,
       }}
     >
       <Screen
-        name="Home"
+        name="HomeTab"
         component={AppStackRoutes}
         options={{
           tabBarIcon: ({ color }) => (
@@ -40,7 +40,7 @@ export function AppTabRoutes() {
         }}
       />
       <Screen
-        name="MyCars"
+        name="MyCarsTab"
         component={MyCars}
         options={{
           tabBarIcon: ({ color }) => (
@@ -49,7 +49,7 @@ export function AppTabRoutes() {
         }}
       />
       <Screen
-        name="Profile"
+        name="ProfileTab"
         component={Profile}
         options={{
           tabBarIcon: ({ color }) => (

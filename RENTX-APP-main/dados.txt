@@ -98,5 +98,8 @@ https://watermelondb.dev/docs
 yarn add @nozbe/watermelondb
 yarn add --dev @babel/plugin-proposal-decorators
 
+biblioteca de imagem do expo 
+  expo install expo-image-picker 
+
 
   

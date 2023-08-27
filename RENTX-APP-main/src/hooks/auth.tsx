@@ -5,7 +5,7 @@ import React, {
   ReactNode,
   useEffect,
 } from "react";
-import api from "../services/api";
+import { api } from "../services/api";
 import { database } from "../database";
 import { User as ModelUser } from "../database/models/User";
 
@@ -51,6 +51,8 @@ const AuthProvider: React.FC<AuthProviderProps> = ({ children }: any) => {
         password,
       });
       api.defaults.headers.common["Authorization"] = `Bearer ${token}`;
+
+      console.log(user);
 
       const userCollection = database.get<ModelUser>("users");
       await database.write(async () => {

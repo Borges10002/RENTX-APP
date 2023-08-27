@@ -13,7 +13,12 @@ const { Navigator, Screen } = createStackNavigator();
 
 export function AppStackRoutes() {
   return (
-    <Navigator screenOptions={{ headerShown: false }} initialRouteName="Home">
+    <Navigator
+      initialRouteName="Splash"
+      screenOptions={{
+        headerShown: false,
+      }}
+    >
       <Screen name="Home" component={Home} />
       <Screen name="CarDetails" component={CarDetails} />
       <Screen name="Scheduling" component={Scheduling} />

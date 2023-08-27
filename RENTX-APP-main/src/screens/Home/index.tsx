@@ -1,10 +1,7 @@
 import { useNavigation } from "@react-navigation/native";
 import React, { useEffect, useState } from "react";
 import { StatusBar } from "react-native";
-import { RectButton } from "react-native-gesture-handler";
 import { RFValue } from "react-native-responsive-fontsize";
-
-import Animated from "react-native-reanimated";
 
 import Logo from "../../assets/logo.svg";
 
